@@ -22,5 +22,12 @@ CREATE TABLE `Procedure` (
   PRIMARY KEY (`pname`)
 );
 
+CREATE TABLE `Trauma` (
+  `trauma` varchar(50) NOT NULL ,
+  
+  PRIMARY KEY (`trauma`)
+);
+
+
 
 
