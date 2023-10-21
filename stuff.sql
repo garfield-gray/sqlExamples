@@ -24,9 +24,18 @@ CREATE TABLE `Procedure` (
 
 CREATE TABLE `Trauma` (
   `trauma` varchar(50) NOT NULL ,
-  
+  `severity` varchar(50) ,
   PRIMARY KEY (`trauma`)
 );
+
+CREATE TABLE `treated by` (
+  `ptime` int(11) ,
+  `phy` varchar(50) ,
+  `trauma` varchar(50) ,
+  PRIMARY KEY (`phy`, `trauma`),
+  FOREIGN KEY (`phy`) REFERENCES `Physician` (`phy`),
+  FOREIGN KEY (`trauma`) REFERENCES `Trauma` (`trauma`) ON UPDATE DELETE
+) ;
 
 
 
