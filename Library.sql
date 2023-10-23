@@ -46,7 +46,7 @@ CREATE TABLE `CD` (
 CREATE TABLE `hasCD` (
   `ISBN` int(50) ,
   `name` varchar(50) NOT NULL ,
-  FOREIGN KEY (`ISBN`) REFERENCES `educational`(`ISBN`)
+  FOREIGN KEY (`ISBN`) REFERENCES `educational`(`ISBN`) ,
   FOREIGN KEY (`name`) REFERENCES `CD`(`name`)
 );
 
@@ -62,7 +62,7 @@ CREATE TABLE `published by` (
   `date` DATE ,
   `number` int(11) ,
   PRIMARY KEY (`ISBN`, `name`),
-  FOREIGN KEY (`name`) REFERENCES `publisher` (`name`)
+  FOREIGN KEY (`name`) REFERENCES `publisher` (`name`) ,
   FOREIGN KEY (`ISBN`) REFERENCES `book` (`ISBN`) 
 ) ;
 
