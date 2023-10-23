@@ -1,2 +1,2 @@
 # sqlExamples
-stufffffffffffff
+examples for databaseFall2023
